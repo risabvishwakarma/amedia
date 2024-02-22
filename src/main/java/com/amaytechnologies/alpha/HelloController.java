@@ -62,7 +62,7 @@ public class HelloController {
                 public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
                     if(slider.isPressed()) {
                         double d = slider.getValue();
-                        mediaPlayer.seek(new Duration(d * 1000));
+                        mediaPlayer.seek(new Duration(d *60* 1000));
                     }
 
                 }
@@ -94,6 +94,21 @@ public class HelloController {
         } catch (Exception e) {
             System.out.println(e);
         }
+    }
+
+    @FXML
+    void onClickNext(ActionEvent event) {
+        double d = mediaPlayer.getCurrentTime().toSeconds();
+        mediaPlayer.seek(new Duration((d +10)*1000));
+
+
+    }
+
+    @FXML
+    void onClickPrev(ActionEvent event) {
+        double d = mediaPlayer.getCurrentTime().toSeconds();
+        mediaPlayer.seek(new Duration((d -10)*1000));
+
     }
 
 }

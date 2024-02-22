@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.media.MediaView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amaytechnologies.alpha.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amaytechnologies.alpha.HelloController">
 
    <children>
       <BorderPane prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -26,9 +26,9 @@
                   <Slider fx:id="slider" showTickLabels="true" showTickMarks="true" />
                   <HBox alignment="TOP_CENTER" prefHeight="46.0" prefWidth="600.0" spacing="20.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Prev" />
+                        <Button mnemonicParsing="false" onAction="#onClickPrev" text="Prev" />
                         <Button fx:id="playButton" mnemonicParsing="false" onAction="#onClickPlay" text="Play" />
-                        <Button mnemonicParsing="false" text="Next" />
+                        <Button mnemonicParsing="false" onAction="#onClickNext" text="Next" />
                      </children>
                   </HBox>
                </children>
